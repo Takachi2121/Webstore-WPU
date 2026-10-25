@@ -42,3 +42,7 @@ Jika Anda ingin berkontribusi, silakan buat pull request atau issue di repositor
 ## 📜 Lisensi
 
 Proyek ini dirilis di bawah lisensi MIT. Namun, harap diperhatikan bahwa penggunaan Preline UI dalam proyek ini tetap mengikuti Preline UI Fair Use License.
+
+## 📝Disclaimer
+
+Proyek ini adalah hasil latihan saya dari WPU Course yang diciptakan oleh Sandhika Galih
