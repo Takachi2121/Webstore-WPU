@@ -105,7 +105,7 @@ class SalesOrderData extends Data
             shipping_cost: $sales_order->shipping_cost,
             total: $sales_order->total,
 
-            due_date_at: $sales_order->due_date_at,
+            due_date_at: Carbon::parse($sales_order->due_date_at),
             created_at: $sales_order->created_at
         );
     }

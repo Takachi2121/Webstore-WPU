@@ -38,15 +38,15 @@ class OfflinePaymentDriver implements PaymentDriverInterface
 
     public function process(SalesOrderData $sales_order)
     {
-        throw new \Exception('Not implemented');
+
     }
 
     public function shouldShowPayNowButton(SalesOrderData $sales_order) : bool{
-        throw new \Exception('Not implemented');
+        return false;
     }
 
     public function getRedirectURL(SalesOrderData $sales_order) : ?string{
-        throw new \Exception('Not implemented');
+        return null;
     }
 }
 ?>
