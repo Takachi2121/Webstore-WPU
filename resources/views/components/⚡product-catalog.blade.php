@@ -42,6 +42,14 @@ new #[Layout('layouts.app')] #[Title('List Products')] class extends Component
         ];
     }
 
+    protected function validationAttributes(): array
+    {
+        return [
+            'select_collections' => 'Collection',
+            'sort_by' => 'Sort By',
+        ];
+    }
+
     public function applyFilter()
     {
         $this->validate();

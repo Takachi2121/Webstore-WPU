@@ -88,16 +88,17 @@ class Checkout extends Component
         ];
     }
 
-    public function messages()
+
+    protected function validationAttributes()
     {
         return [
-            'data.full_name.required' => 'Full Name perlu diisi',
-            'data.email.required' => 'Email perlu diisi',
-            'data.phone_number.required' => 'Phone Number perlu diisi',
-            'data.street_address.required' => 'Street Address perlu diisi',
-            'data.destination_region_code.exists' => 'Lokasi tujuan tidak valid',
-            'data.destination_region_code.required' => 'Lokasi tujuan perlu diisi',
-            'data.payment_method_hash.required' => 'Metode pembayaran perlu diisi',
+            'data.full_name' => 'Name',
+            'data.email' => 'Email',
+            'data.phone_number' => 'Phone Number',
+            'data.street_address' => 'Street Address',
+            'data.destination_region_code' => 'Destination Region',
+            'data.shipping_hash' => 'Shipping Method',
+            'data.payment_method_hash' => 'Payment Method'
         ];
     }
 
