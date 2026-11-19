@@ -6,6 +6,7 @@ namespace App\Services;
 
 use App\Data\CheckoutData;
 use App\Data\SalesOrderData;
+use App\Events\SalesOrderCreated;
 use App\Models\Product;
 use App\Models\SalesOrder;
 use App\States\SalesOrder\Pending;
@@ -93,6 +94,10 @@ public function makeAnOrder(CheckoutData $checkout_data) : SalesOrderData
             return $sales_order;
         });
 
-        return SalesOrderData::fromModel($sales_order);
+        $data = SalesOrderData::fromModel($sales_order);
+
+        event(new SalesOrderCreated($data));
+
+        return $data;
     }
 }
